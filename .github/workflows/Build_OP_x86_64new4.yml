@@ -68,7 +68,14 @@ jobs:
         rm -rf feeds/luci/applications/luci-app-passwall
         git clone https://github.com/xiaorouji/openwrt-passwall package/passwall-luci
         
-        git clone "your_github_link" package/"your_folder_name"      
+        #git clone "your_github_link" package/"your_folder_name" 
+
+    - name: Import external feeds - openclash
+      working-directory: ./openwrt
+      run: |
+        git clone https://github.com/vernesong/OpenClash.git package/luci-app-openclash
+        
+        #git clone "your_github_link" package/"your_folder_name" 
 
     #- name: Import external feeds - JerryKuKu Argon
     #  working-directory: ./openwrt
